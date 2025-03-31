@@ -1,0 +1,202 @@
+/* Main header container */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensures header stays above other content */
+}
+
+/* Content container with max-width */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flexbox layout for header content */
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.siteName {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 8px;
+  color: #3490dc; /* Blue color for brand name */
+}
+
+/* Main navigation */
+.nav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+}
+
+.navItem {
+  margin: 0 15px;
+}
+
+.navLink {
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #3490dc;
+  text-decoration: none;
+}
+
+/* User action buttons */
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.signIn {
+  margin-right: 15px;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signUp {
+  margin-right: 15px;
+}
+
+.chatButton {
+  background-color: #3490dc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chatButton:hover {
+  background-color: #2779bd;
+}
+
+/* Mobile menu button - hidden on desktop */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menuIcon {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #4a5568;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #4a5568;
+  transition: transform 0.3s;
+}
+
+.menuIcon::before {
+  top: -6px;
+}
+
+.menuIcon::after {
+  bottom: -6px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Show menu button on mobile */
+  .menuButton {
+    display: block;
+    order: 1;
+  }
+
+  /* Hide sign in/up on small mobile */
+  .signIn {
+    display: none;
+  }
+
+  .signUp {
+    display: none;
+  }
+
+  /* Chat button on right side */
+  .actions {
+    order: 2;
+  }
+
+  /* Logo in the middle */
+  .logo {
+    order: 0;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  /* Full width nav that appears below header when menu is open */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show menu when the showMenu class is applied */
+  .showMenu {
+    display: block;
+  }
+
+  /* Stack nav items vertically on mobile */
+  .navList {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .navItem {
+    margin: 0;
+  }
+
+  .navLink {
+    display: block;
+    padding: 12px 20px;
+  }
+}

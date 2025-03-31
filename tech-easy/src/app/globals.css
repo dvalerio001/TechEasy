@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting base font and text color for the entire site */
+body {
+  font-family: "Arial", sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+/* Making sure the page takes up at least the full height of the viewport */
+html,
+body {
+  min-height: 100vh;
+}
+
+/* Basic container for consistent content width */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flexbox layout helper */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Basic button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #3490dc;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2779bd;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #3490dc;
+  border: 1px solid #3490dc;
+}
+
+.btn-secondary:hover {
+  background-color: #f8f9fa;
+}
+
+/* Typography helper classes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: #3490dc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form element focus styles */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #3490dc;
+  outline-offset: 2px;
+}

@@ -1,0 +1,98 @@
+/* Base button styles shared by all variants */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+/* Button will not wrap text */
+.button > * {
+  white-space: nowrap;
+}
+
+/* Focus styles for accessibility */
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Hover effect - slightly darker */
+.button:hover {
+  transform: translateY(-1px);
+}
+
+/* Button Variants */
+
+/* Primary - solid blue button */
+.button--primary {
+  background-color: #3490dc;
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #2779bd;
+}
+
+/* Secondary - green button */
+.button--secondary {
+  background-color: #38a169;
+  color: white;
+}
+
+.button--secondary:hover {
+  background-color: #2f855a;
+}
+
+/* Outline - transparent with border */
+.button--outline {
+  background-color: transparent;
+  border-color: #3490dc;
+  color: #3490dc;
+}
+
+.button--outline:hover {
+  background-color: rgba(52, 144, 220, 0.1);
+}
+
+/* Button Sizes */
+
+/* Small size */
+.button--small {
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+}
+
+/* Medium (default) size */
+.button--medium {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Large size */
+.button--large {
+  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Full width variation */
+.button--fullWidth {
+  width: 100%;
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button with icon */
+.button svg {
+  margin-right: 0.5rem;
+}
