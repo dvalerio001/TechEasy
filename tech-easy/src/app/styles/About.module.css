@@ -1,0 +1,116 @@
+.about {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.about__header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.about__title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about__subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about__section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.about__section:hover {
+  transform: translateY(-5px);
+}
+
+.about__sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3490dc;
+}
+
+.about__sectionText {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.about__team {
+  margin-top: 4rem;
+}
+
+.about__teamTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about__teamMembers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.about__teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about__memberImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #3490dc;
+}
+
+.about__memberName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.about__memberRole {
+  color: #3490dc;
+  margin-bottom: 0.5rem;
+}
+
+.about__memberBio {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+  }
+
+  .about__teamMembers {
+    grid-template-columns: 1fr;
+  }
+}

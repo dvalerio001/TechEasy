@@ -1,5 +1,5 @@
 import "./globals.css"; // Global CSS that applies to the entire app
-import Header from "../../components/layout/Header";
+import Header from "./components/layout/Header";
 
 // Define metadata for the application (for SEO and browser tabs)
 export const metadata = {
